@@ -27,22 +27,28 @@ namespace CocaCola.Tester
             Assert.AreEqual(expectedOutput, actualOutput);
         }
 
-        [Test]
-        public void Input2_Return2()
+        [Test, Sequential]
+        public void Input2_Return2(
+            [Values(64, 36, 50, 2, 15)]int input,
+            [Values("64", "Coca", "Cola","2", "CocaCola")] string expectedResult)
+        //Test the output of progrem when the number is 
         {
-            var expectedResult = "2";
-            var actualOutput = numOp.CocaColaOperator(2);
-
+            // Act: Run the method under test
+            var actualOutput = numOp.CocaColaOperator(input);
+            // Assert: Verify the result
             Assert.AreEqual(expectedResult, actualOutput);
         }
 
         [Test]
         public void Input3_ReturnCoca(
             [Values(3, 9, 12, 18, 21)] int input)
+        //Test the output of progrem when the number is 
         {
+            // Arrange: Define a test output value
             var expectedResult = "Coca";
+            // Act: Run the method under test
             var actualOutput = numOp.CocaColaOperator(input);
-
+            // Assert: Verify the result
             Assert.AreEqual(expectedResult, actualOutput);
         }
 

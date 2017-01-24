@@ -8,6 +8,11 @@ namespace NumberOperator.Library
 {
     public class NumOperator
     {
+        // Operator that check if the variable is divided by 3 so it return "Coca"
+        //                     if the variable is divided by 5 so it return "Cola"
+        //                     if the variable is divided by 3 and 5 so it return "CocaCola"
+        //                     else it will return it as it is
+        #region CocaColaOperator
         public string CocaColaOperator(int num)
         {
             // return "1";
@@ -15,16 +20,17 @@ namespace NumberOperator.Library
             // return num.ToString();
 
             string output = string.Empty;
-            if (num % 3 == 0 && num % 5 == 0)
-                output = "CocaCola";
-            else if (num % 3 == 0)
-                output = "Coca";
-            else if (num % 5 == 0)
-                output = "Cola";
-            else
-                output = num.ToString();
+            if (num % 3 == 0 && num % 5 == 0)//Tests if the variable num is divided on 3 AND 5
+                output = "CocaCola";         //result "CocaCola" as output
+            else if (num % 3 == 0)           //Tests if the variable num is divided on 3
+                output = "Coca";             //result "CocaCola" as output
+            else if (num % 5 == 0)           //Tests if the variable num is divided on 5
+                output = "Cola";             //result "CocaCola as output
+            else                             //If not
+                output = num.ToString();     //the method will return the variable as it is
 
             return output;
         }
+        #endregion 
     }
 }
