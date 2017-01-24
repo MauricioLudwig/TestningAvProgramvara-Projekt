@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace CocaColaProject
 {
-    class Program
+    class Runtime
     {
-        static void Main(string[] args)
+
+        public void Start()
         {
-            var runtime = new Runtime();
-            runtime.Start();
+
         }
     }
 }
