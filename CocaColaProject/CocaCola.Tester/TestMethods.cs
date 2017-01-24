@@ -13,7 +13,7 @@ namespace CocaCola.Tester
     {
         // Create an instance to test:  
         NumOperator numOp = new NumOperator();
-        #region Test input 1
+        #region Test input 1 and retun "1"
         [Test]
         public void Test_Input1_Return1()
         //Test the output of progrem when the number is 1
@@ -43,7 +43,7 @@ namespace CocaCola.Tester
         }
         #endregion
 
-        #region Test input that return Coca
+        #region Test inputs that return Coca
         [Test]
         public void Input_That_Return_Coca(
             [Values(3, 9, 12, 18, 21)] int input)
@@ -58,7 +58,7 @@ namespace CocaCola.Tester
         }
         #endregion
 
-        #region Test input that return Cola
+        #region Test inputs that return Cola
         [Test]
         public void Test_Input_That_Return_Cola(
             [Values(5, 10, 20, 25)] int input)
@@ -75,7 +75,7 @@ namespace CocaCola.Tester
         }
         #endregion
 
-        #region Test input that return CocaCola
+        #region Test inputs that return CocaCola
         [Test]
         public void Test_Input_That_Return_CocaCola(
             [Values(15, 30, 45, 60, 75, 90)] int input)
