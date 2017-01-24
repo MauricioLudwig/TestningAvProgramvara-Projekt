@@ -59,5 +59,18 @@ namespace CocaCola.Tester
             Assert.AreEqual(expectedOutput, actualOutput);
         }
 
+        [Test]
+        public void Test_Input15_Return_CocaCola()
+        //Test the output of progrem when the number is 
+        {
+            // Arrange: Define a test output value
+            var expectedOutput = "CocaCola";
+
+            // Act: Run the method under test
+            var actualOutput = numOp.CocaColaOperator(15);
+
+            // Assert: Verify the result
+            Assert.AreEqual(expectedOutput, actualOutput);
+        }
     }
 }

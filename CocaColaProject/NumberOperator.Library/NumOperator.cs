@@ -15,9 +15,12 @@ namespace NumberOperator.Library
             // return num.ToString();
 
             string output = string.Empty;
-
-            if (num % 3 == 0)
+            if (num % 3 == 0 && num % 5 == 0)
+                output = "CocaCola";
+            else if (num % 3 == 0)
                 output = "Coca";
+            else if (num % 5 == 0)
+                output = "Cola";
             else
                 output = num.ToString();
 
