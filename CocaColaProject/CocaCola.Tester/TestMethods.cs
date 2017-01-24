@@ -11,17 +11,19 @@ namespace CocaCola.Tester
     [TestFixture]
     public class TestMethods
     {
+        // Create an instance to test:  
         NumOperator numOp = new NumOperator();
         [Test]
         public void Test_Input1_Return1()
+        //Test the output of progrem when the number is 1
         {
-            // Arrange
+            // Arrange: Define a test output value
             var expectedOutput = "1";
 
-            // Act
+            // Act: Run the method under test
             var actualOutput = numOp.CocaColaOperator(1);
 
-            // Assert
+            // Assert: Verify the result
             Assert.AreEqual(expectedOutput, actualOutput);
         }
 
@@ -35,12 +37,26 @@ namespace CocaCola.Tester
         }
 
         [Test]
-        public void Input3_ReturnCola()
+        public void Input3_ReturnCoca()
         {
-            var expectedResult = "Cola";
+            var expectedResult = "Coca";
             var actualOutput = numOp.CocaColaOperator(3);
 
             Assert.AreEqual(expectedResult, actualOutput);
+        }
+
+        [Test]
+        public void Test_Input5_Return_Cola()
+        //Test the output of progrem when the number is 
+        {
+            // Arrange: Define a test output value
+            var expectedOutput = "Cola";
+
+            // Act: Run the method under test
+            var actualOutput = numOp.CocaColaOperator(5);
+
+            // Assert: Verify the result
+            Assert.AreEqual(expectedOutput, actualOutput);
         }
 
     }

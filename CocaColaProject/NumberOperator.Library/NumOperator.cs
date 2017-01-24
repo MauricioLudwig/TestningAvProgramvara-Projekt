@@ -17,7 +17,7 @@ namespace NumberOperator.Library
             string output = string.Empty;
 
             if (num % 3 == 0)
-                output = "Cola";
+                output = "Coca";
             else
                 output = num.ToString();
 
