@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace NumberOperator.Library
 {
-    public class NumberOperator
+    public class NumOperator
     {
+        public string CocaColaOperator(int num)
+        {
+            return "1";
+        }
     }
 }
