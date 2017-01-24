@@ -10,7 +10,18 @@ namespace NumberOperator.Library
     {
         public string CocaColaOperator(int num)
         {
-            return "1";
+            // return "1";
+
+            // return num.ToString();
+
+            string output = string.Empty;
+
+            if (num % 3 == 0)
+                output = "Cola";
+            else
+                output = num.ToString();
+
+            return output;
         }
     }
 }
