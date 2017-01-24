@@ -37,37 +37,40 @@ namespace CocaCola.Tester
         }
 
         [Test]
-        public void Input3_ReturnCoca()
+        public void Input3_ReturnCoca(
+            [Values(3, 9, 12, 18, 21)] int input)
         {
             var expectedResult = "Coca";
-            var actualOutput = numOp.CocaColaOperator(3);
+            var actualOutput = numOp.CocaColaOperator(input);
 
             Assert.AreEqual(expectedResult, actualOutput);
         }
 
         [Test]
-        public void Test_Input5_Return_Cola()
+        public void Test_Input5_Return_Cola(
+            [Values(5, 10, 20, 25)] int input)
         //Test the output of progrem when the number is 
         {
             // Arrange: Define a test output value
             var expectedOutput = "Cola";
 
             // Act: Run the method under test
-            var actualOutput = numOp.CocaColaOperator(5);
+            var actualOutput = numOp.CocaColaOperator(input);
 
             // Assert: Verify the result
             Assert.AreEqual(expectedOutput, actualOutput);
         }
 
         [Test]
-        public void Test_Input15_Return_CocaCola()
-        //Test the output of progrem when the number is 
+        public void Test_Input15_Return_CocaCola(
+            [Values(15, 30, 45, 60, 75, 90)] int input)
+        //Test the output of program when the number is 
         {
             // Arrange: Define a test output value
             var expectedOutput = "CocaCola";
 
             // Act: Run the method under test
-            var actualOutput = numOp.CocaColaOperator(15);
+            var actualOutput = numOp.CocaColaOperator(input);
 
             // Assert: Verify the result
             Assert.AreEqual(expectedOutput, actualOutput);
